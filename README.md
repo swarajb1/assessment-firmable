@@ -17,5 +17,29 @@ This application scrapes the homepage of a given website and answers key questio
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
-   cd fastapi-web-scraper
+   git clone git@github.com:swarajb1/assessment-firmable.git
+   cd assessment-firmable
+   ```
+
+2. Install dependencies:
+   ```bash
+   poetry install
+   ```
+
+3. Run the application:
+   ```bash
+   poetry run python main.py
+   ```
+
+### Usage
+1. Start the FastAPI server:
+   ```bash
+   poetry run uvicorn main:app --reload
+   ```
+
+2. Open your browser and navigate to `http://127.0.0.1:8000/docs` to access the Swagger UI for API documentation and testing.
+
+
+### License
+This project is licensed under the CC0 1.0 Universal License - see the [LICENSE](LICENSE) file for details.
+
