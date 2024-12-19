@@ -1,9 +1,13 @@
+from dotenv import load_dotenv
+import os
 from fastapi import FastAPI, HTTPException, Header, Depends
 from pydantic import BaseModel, HttpUrl
 from bs4 import BeautifulSoup
 import requests
 
-SECRET_KEY = "solar_system"
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 
 def authenticate(secret_key: str = Header(...)):
